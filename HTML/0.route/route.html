@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>route</title>
+</head>
+<body>
+    <h1> route </h1>
+    <!--
+    web에서의 경로
+    protocol host          port    path    query string
+    https:// www.naver.com :8888   /login  name="홍길동"&page=1 
+
+        origin: protocol + host + port까지 모두 합친 URL
+        protocol: http, https
+        host: 사이트 도메인
+        port: 자원에 접근할 수 있는 포트번호
+        path: 사이트 내부 경로
+        query string: 요청의 key와 value값
+
+        Directory에서의 경로
+        HTML 파일에서 경로는 파일 시스템 내의 위치를 지정하여
+        웹 페이지에서 다른 파일이나 리소스를 참조하는데 사용
+
+            상대 경로(Relative Path)
+            절대 경로(Absolute Path)
+
+                /   절대경로
+                ./  현재 디렉토리
+                ../ 상위 디렉토리
+     -->
+
+     <ul>
+        상대경로
+        <li>
+            <a href="./sameRoute.html">sameRoute.html</a>
+        </li>
+        절대경로
+        <li>
+            <a href= "../home.html"> home.html</a>
+        </li>
+
+        하위폴더 파일참조
+        <li>
+            <a href="./sub/subRoute.html"> SubRoute.html </a>
+        </li>
+    </ul>
+    <ul>
+        절대경로
+        <li>
+            <a href="C:\vscode_workspace46_A\HTML\0.route\sameRoute.html"> SameRoute.html </a>
+        </li>
+
+        <li>
+            <a href="C:\vscode_workspace46_A\HTML\0.route\sub\subRoute.html"> subRoute.html </a>
+        </li>
+
+        <li>
+            <a href="C:\vscode_workspace46_A\HTML\home.html"> home.html </a>
+        </li>
+     </ul>
+</body>
+</html>

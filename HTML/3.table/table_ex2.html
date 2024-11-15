@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* 태그의 이름으로 불러다가 스타일 속성 변경*/
+        table,td, th
+        {/* css 속성으로 html 표 요소에서 스타일 지정
+            separate: 기본값, 각 셀의 경계분리
+            collapse; 셀의 경계를 하나로 결합하여 중복되지 않도록
+            */
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 10px;
+        }
+
+        td{
+            width: 50px;
+            height: 50px;
+        }
+        
+        td.black
+        {
+            background-color: black;
+        }
+
+        td.pink
+        {
+            background-color: pink;
+        }
+
+        td.gray
+        {
+            background-color: gray;
+        }
+
+        #box
+        {
+            width: 100px;
+            height: 100px;
+            background-color: lightblue;
+        }
+    </style>
+
+    <title>table2</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td class = "gray" colspan = "4">a1</td>
+        </tr>
+
+        <tr>
+            <td class = "pink" colspan = "2" rowspan="2" style="width: 100px; height: 100px;"> a2</td>
+            <td>a3</td>
+            <td>b3</td>
+        </tr>
+
+        <tr>
+            <td>a4</td>
+            <td>b4</td>
+        </tr>
+
+        <tr>
+            <td colspan = "2">a5</td>
+            <td colspan = "2">b5</td>
+        </tr>
+    </table>
+    
+</body>
+</html>

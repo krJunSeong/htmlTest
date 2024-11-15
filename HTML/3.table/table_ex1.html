@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* 태그의 이름으로 불러다가 스타일 속성 변경*/
+        table,td, th
+        {/* css 속성으로 html 표 요소에서 스타일 지정
+            separate: 기본값, 각 셀의 경계분리
+            collapse; 셀의 경계를 하나로 결합하여 중복되지 않도록
+            */
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 10px;
+        }
+    </style>
+
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <caption > 
+            <h1> Modern Browser</h1>
+            <p>국내에서 사용하는 모던 브라우저</p>
+        </caption>
+        <tr>
+            <th> 브라우저 </th>
+            <th> 제조업체 </th>
+            <th> 다운로드 </th>
+        </tr>
+
+        <tr>
+            <td> 크롬</td>
+            <td> google</td>
+            <td> https://www.google.com/chrome</td>
+        </tr>
+
+        <tr>
+            <td> 파이어폭스</td>
+            <td> mozila</td>
+            <td> https://www.mozila.org/ko/firefox</td>
+        </tr>
+
+        <tr>
+            <td> 엣지</td>
+            <td> microsoft</td>
+            <td> https://www.microsoft.com</td>
+        </tr>
+    </table>
+</body>
+</html>

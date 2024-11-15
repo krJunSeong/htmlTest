@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #field2 { width : 50%;}
+        
+        #field3 { width : 70%;}
+
+        #div2{
+            margin-top : 20px;
+            margin-bottom : 20px;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <fieldset id = "field2">
+        <legend> 회원정보</legend>
+
+        <form action = "" method = "get">
+            <!-- name: 서버로 전송될 때 이름, key값 ex) url 끝에 id = ~~~ & pw = ~~~ -->
+            ID:<br><input type = "text" name = "idtxt" id = "id" value = "hong">
+            <br>
+            <!-- <label> : 사용자 인터페이스에서 폼 요소와 연결된 테스트를 정의하는데 사용 -->
+            
+            PW <br>
+            <input type = "password" name = "pwtxt" id = "pw"> <br>
+        
+
+    </fieldset>
+
+    <fieldset id = "field3">
+        <legend> 과목</legend>
+
+        HTML <input type = "checkbox" name = "subject" value = "HTMl"> 
+        CSS <input type = "checkbox" name = "subject" value = "CSS" checked>
+        JavaScript <input type = "checkbox" name = "subject" value = "JavaScript">
+
+        <div id = "div2">
+        상 <input type ="radio" name = "Grade" id ="upper" value="상">
+        중 <input type ="radio" name = "Grade" id = "middle" value="중">
+        하 <input type ="radio" name = "Grade" id = "lower" value="하">
+        </div>
+
+        자기 소개<br>
+        <textarea cols = "50" rows="10" name = "mulitTxt"></textarea> <Br>
+
+    </fieldset>
+    
+    <input type = "submit" value = "전송하기" onclick="alert('전송되었습니다.')">
+    <input type = "reset" value = "취소하기">
+</form>
+</body>
+</html>

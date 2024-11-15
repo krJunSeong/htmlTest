@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <style>
+        /* div{border: 1px solid red;} */
+        body {
+            background-color: rgba(0, 0, 0, 0.8); /* 검정 배경에 약간 투명도 */
+            display: flex;                       /* 화면 중앙 정렬을 위해 flex 적용 */
+            justify-content: center;              /* 가로 가운데 정렬 */
+            align-items: center;                  /* 세로 가운데 정렬 */
+            min-height: 100vh;                    /* 화면의 100% 높이 */
+            margin: 0;                            /* 기본 여백 제거 */
+        }
+
+        h1.titleName {
+            text-align: center; /* 제목을 중앙 정렬 */
+            margin-top: 20px;
+        }
+        
+        div.fullSize
+        {
+            width: 350px;   
+            height: 550px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: white;
+        }
+
+        div.localDiv
+        {
+            margin: 10px auto;
+            display: flex;
+            align-items: center;
+        }
+
+        div.localDiv label {
+            width: 110px; /* 라벨의 고정 너비를 설정하여 일관된 정렬을 유지합니다. */
+        }
+
+        div.selectInfo
+        {
+            margin: 10px auto;
+            display: flex;
+            align-items: center;
+            
+        }
+        div.selectInfo label
+        {
+            width: 110px;
+        }
+        
+        div.AcceptBtn
+        {
+            width: 100%;
+            display:flex;
+            margin-top: 20px;
+        }
+
+        input.inforInput
+        {
+            /* width: 100px; */
+            margin: 1px;
+        }
+
+        input.joinBtn
+        {
+            width: 50%;
+            height: 40px;
+            margin-right: 10px;
+            color:white;
+            background-color: greenyellow;
+            float: left;
+        }
+
+        input.joinBtn:hover
+        {
+            background-color: green;
+        }
+        input.cancelBtn:hover
+        {
+            background-color: tomato;
+        }
+
+        input.cancelBtn
+        {
+            width: 50%;
+            color:white;
+            background-color: red;
+            float: right;
+        }
+    </style>
+
+</head>
+<body>
+    <div class = "fullSize">
+    <h1 class = "titleName"> 회원가입</h1>
+    <form action = "" method = "get">
+        <fieldset id = "field2">
+            <legend> 필수정보</legend>
+    
+                <!-- name: 서버로 전송될 때 이름, key값 ex) url 끝에 id = ~~~ & pw = ~~~ -->
+                <div class="localDiv">
+                    <label for ="idtxt">아이디</label>
+                    <input type = "text" name = "idtxt" class = "inforInput">
+                </div>
+                <div class = "localDiv">
+                    <label for = "pw">패스워드</label>
+                    <input type = "password" name = "pw" class = "inforInput">
+                </div>
+                <div class = "localDiv">
+                    <label for="pwChk">패스워드 확인 </label>
+                    <input type = "text" name = "pwChk" class = "inforInput">
+                </div>
+                <div class = "localDiv">
+                    <label for="mail"> 이메일 </label>
+                    <input type = "email" name = "mail" class = "inforInput">
+                </div>
+                <div class = "localDiv">
+                    <label for = "phone"> 핸드폰 </label>
+                    <input type = "number" name = "phone" class = "inforInput">
+                </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>선택정보</legend>
+            
+            <div class = "selectInfo">
+                <label for = "calandar"> 생년월일 </label>
+                <input type = "date" name = "calandar" value = "yymmdd"> <br>
+            </div>
+            <div class = "selectInfo">
+            <label for="select">mbti</label> <select name = "select">
+                <option value = "1"> INFJ</option>
+                <option value = "2"> ISTP</option>
+                <option value = "3"> ENTP</option>
+             </select><br>
+            </div>
+            <div class = "selectInfo">
+            <label> 관심분야 </label>
+            <input type = "checkbox" name = "subject" value = "Japanese"> 일본어
+            <input type = "checkbox" name = "subject" value = "IT"> IT
+            </div>
+        </fieldset>
+
+        <div class = "AcceptBtn">
+            <input type="submit" name="submitBtn" value="가입" class = "joinBtn">
+            <input type="submit" name="submitBtn" value="취소" class = "cancelBtn">
+        </div>
+
+        </form>
+    </div>
+</body>
+</html>

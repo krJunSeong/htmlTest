@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: rgba(0, 0, 0, 0.8); /* 검정 배경에 약간 투명도 */
+        display: flex; /* 화면 중앙 정렬을 위해 flex 사용 */
+        justify-content: center; /* 가로 가운데 정렬 */
+        align-items: center; /* 세로 가운데 정렬 */
+
+        height: 100vh;
+        margin: 0; /* 기본 여백 제거 */
+      }
+
+      .fullContainner {
+        border: solid blue;
+        width: 100%; /* 부모 크기(100vw) 기준으로 100% */
+        height: 100%; /* 부모 크기(100vh) 기준으로 100% */
+        max-height: 600vh;
+        background-color: white;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .leftDiv {
+        height: 100%;
+        width: 30%;
+        border: 1px solid violet;
+        float: left;
+      }
+
+      .mainDiv {
+        height: 100%;
+        width: 70%;
+        border: 1px solid red;
+        float: right;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="fullContainner">
+      <div class="leftDiv">left model</div>
+
+      <div class="mainDiv">main</div>
+    </div>
+  </body>
+</html>

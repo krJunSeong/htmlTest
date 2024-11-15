@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+
+    <script>
+        function button()
+        {
+            alert('button clicked');
+        }
+    </script>
+</head>
+<body>
+    <h1> Create User Input Form </h1>
+
+
+    <form action "" method = "get">
+        <fieldset>
+            <legend> 분류1 </legend>
+
+            입력란 <input type = "text" name = "input"> <br>
+            비밀번호 입력란 <input type = "password"> <br>
+            email Input <input type="email"> <br>
+            ULR <Input type="url"> <br>
+            number Input <Input type = "number"> <br>
+            전화번호 입력란 <input type = "tel"> <br>
+            검색 <input type="search" placeholder="검색어를 입력하시오"> <br>
+            색상 <input type = "color" name = "color"> <br>
+            범위 <input type = "range" value = "0" max = "10"><br>
+            날씨 <input type = "date"> <br>
+            날짜 시간 <input type = "datetime-local"> <br>
+            월 <input type = "month"> <br>
+            주 <input type = "week"> <br>
+            시간 <input type = "time"> <br>
+            파일 <input type = "file"> <br>
+            이미지 <input type = "image" src="../1.image/file/aaa.gif"> <br>
+        </fieldset>
+
+        <fieldset>
+            <legend> 분류2</legend>
+            <!-- 데이터 전소용 -->
+            히든 <input type = "hidden" value = "100">
+
+            <!-- 여러개 선택가능한 체크박스 -->
+            check box <input type = "checkbox" name = "checkbox" value = "1"> qeustion 1
+                        <input type = "checkbox" name = "checkbox" value = "2"> question 2
+                        <br>
+
+            <!-- 1개만 선택 가능한 체크박스, name값이 동일해야 하나의 라디오로 인식함 -->
+            라디오 <input type ="radio" name = "radiobt" value="1"> 선택1
+            <input type ="radio" name = "radiobt" value="2"> 선택2
+
+            <!-- checked: 처음부터 선택된 시작하는 상태 옵션 -->
+             <input type ="radio" name = "radiobt" value="3" checked> 선택3
+
+             <br>
+             <select name = "select">
+                <option value = "1" seletcted> sec 1</option>
+                <option value = "2"> sec 2</option>
+                <option value = "3"> sec 3</option>
+             </select><BR>
+
+            여러 줄 입력란
+            <textarea cols = "50" rows="10"></textarea> <Br>
+
+            <!-- 클릭시 알림창 띄우기 -->
+            버튼1 <input type = "button" value = "버튼1" onclick="alert('zz')">
+
+            <!-- 클릭시 이동 -->
+            버튼2 <input type = "button" 
+                    onclick="location.href = '../home.html'" value = "home">
+            
+            버튼3 <button type= "button"  onclick = "button()"> button3</button>
+        </fieldset>
+
+        <input type = "submit" value = "전송하기">
+        <input type = "reset" value = "재입력">
+    </form>
+</body>
+</html>

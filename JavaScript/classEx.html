@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body 
+      {
+        background-color: rgba(0, 0, 0, 0.1); /* 검정 배경에 약간 투명도 */
+        display: flex; /* 화면 중앙 정렬을 위해 flex 적용 */
+        justify-content: center; /* 행 가운데 정렬 */
+        align-items: center; /* 열 가운데 정렬 */
+        flex-direction: column;
+        min-height: 100vh; /* 화면의 100% 높이 */
+        margin: 0; /* 기본 여백 제거 */
+      }
+
+      div
+      {
+        display: flex; /* 화면 중앙 정렬을 위해 flex 적용 */
+        justify-content: center; /* 가로 가운데 정렬 */
+        align-items: center; /* 세로 가운데 정렬 */
+        margin: 10px; /* 기본 여백 제거 */
+        width: 300px
+      }
+
+      label
+      {
+        width: 130px;
+      }
+    </style>
+
+    
+    <script>
+    function idContorller()
+    {
+        let idField = document.querySelector('.inforInput');
+        if(idField.value.length < 8) idField.style.backgroundColor = 'red';
+        else  idField.style.backgroundColor = 'blue';
+    }
+
+    function pwController()
+    {
+        let pwField = document.querySelector('.pw');
+        let pwChkField = document.querySelector('.pwChk');
+
+        if(pwField.value != pwChkField.value) pwField.style.backgroundColor = 'red'
+        else pwField.style.backgroundColor = 'blue'
+    }
+
+    function chkJoin()
+    {
+        let idField = document.querySelector('.inforInput');
+        let pwField = document.querySelector('.pw');
+        let pwChkField = document.querySelector('.pwChk');
+        if(idField.value.length < 8) alert('8자 미만입니다');
+        if(pwField.value != pwChkField.value) alert('패스워드 불일치');
+    }
+    </script>
+  </head>
+  <body>
+    <form action="" method = "get" onsubmit="chkJoin()">
+        <div></div>
+    <h1 style="display: flex; align-items: center;  justify-content: center;">회원가입</h1>
+    <fieldset class = "inputArea">
+      <div class="playerId">
+        <label for="idtext"> 아이디 </label>
+        <input type="text" name="idtxt" class="inforInput" 
+        onchange = "idContorller()"/>
+      </div>
+
+      <div class="localDiv2">
+        <label for="pwtxt">패스워드</label>
+        <input type="text" name="pw" class="pw" 
+        onchange = "pwController()"/>
+      </div>
+
+      <div class="localDiv3">
+        <label for="pwChktxt" >패스워드 확인 </label>
+        <input type="text" name="pwChk" class="pwChk" onchange = "pwController()"  />
+      </div>
+
+      <div class = "AcceptBtn">
+        <input type="submit" name="submitBtn" value="가입" class = "joinBtn">
+        <input type="submit" name="submitBtn" value="취소" class = "cancelBtn">
+    </div>
+    </fieldset>
+    </form>
+  </body>
+</html>

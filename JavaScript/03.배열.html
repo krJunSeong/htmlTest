@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script>
+      /*
+            배열(array)
+            js 배열은 다양한 데이터 타입 값 포함가능
+            접근: index
+        */
+
+      let test = ["hello", 1, true];
+      let fruits = ["Apple", "Banana", "Cherry"];
+      let fruits2 = new Array("Apple", "Banana", "Cerry");
+
+      // 배열 요소 접근
+      console.log(fruits[0]);
+      console.log(fruits[1]);
+
+      // 배열 요소 수정
+      fruits[0] = "bbb";
+
+      console.log(fruits.length);
+
+      // 배열 끝 요소 추가 push
+      fruits.push("melon");
+      console.log(fruits);
+
+      // 제거
+      let lastFruit = fruits.pop();
+      console.log(lastFruit);
+      console.log(fruits);
+
+      // 합치기
+      let vet = ["Crot", "peas"];
+      let food = fruits.concat(vet);
+      console.log(food);
+
+      // sort
+      fruits.sort();
+      console.log(fruits);
+
+      // reverse
+      fruits.reverse();
+      console.log(fruits);
+
+      // 배열 순회
+      fruits.forEach((fruits, index) => {
+        console.log(`${index + 1}.${fruits}`);
+      });
+
+      let arrarr = [1, 2, [3, 4, 5]];
+
+      console.log(arrarr[0]);
+      console.log(arrarr[2][0]);
+      for (let subject of arrarr[2]) {
+        console.log(subject);
+      }
+
+      // one click searching
+      for (let i = 0; i < arrarr.length; i++) {
+        if (Array.isArray(arrarr[i])) {
+          for (let j = 0; j < arrarr[i].length; j++) {
+            console.log(arrarr[i][j]);
+          }
+        }
+        else    
+        {
+            console.log(arrarr[i]);
+        }
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

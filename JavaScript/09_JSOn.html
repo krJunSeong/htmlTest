@@ -15,69 +15,23 @@
 
      -->
 
-     <script>
-        let obj = '{"id": "aaaa" , "title" : "bbb"}';
-        console.log('--------- String -----');
-        console.log(typeof obj); // string
-        console.log(obj.id);    //undeefined
-        console.log(obj["id"]); // undeefined
-
-        console.log('------ string -> json object --');
-        let ob = JSON.parse(obj);   // string -> json
-        console.log(ob.id);
-        console.log(ob["id"]);
-
-        console.log('---- json obj => string ---');
-
-        let obj2 = {"id" : "aaa", "title" : "bbb"}; // 
-        var ob2 = JSON.stringify(obj2); // json to string
-        console.log(ob2);
-        console.log(typeof ob2);
-
-        window.onload = function()  // html 모두 로딩 되면 스크립트 실행
-        {
-            let person = 
-            {
-                name : "John Doe",
-                age : 30,
-                isStudent : false,
-                courses : ["Math", "Science", "history"],
-                address:
-                {
-                    strret: "123 Main st",
-                    city: "town",
-                    state:"Ca"
-                }
-            };
-
-            let jsonString = JSON.stringify(person);
-            console.log(jsonString);
-            console.log(typeof jsonString);
-
-            let jsonStrings = '{"name":"John Doe","age":30,"isStudent":false,"courses":["Math","Science","history"],"address":{"strret":"123 Main st","city":"town","state":"Ca"}}';
-            let str =JSON.parse(jsonString);
+     <style>
+        table, th, td {
+            border : 1px solid black;
+            border-collapse: collapse;
         }
-     </script>
-</head>
-<body>
-    
-</body>
-</html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!-- 
-    json.stringify : js 객체를 json 으로 변환
-    json.parse: json 문자열을 자바스크립트 객체로 변환
 
-    1. text 기반 포맷: Json은 가독성이 좋다
-    2. Web server <-> client 데이터전송용도 사용
-    3. 경량: 파일크기가 작음
-    4. key - value : Joson은 이름(키)과 값으로 구성된 쌍을 사용하여 데이터표현
+        caption{
+            font-size : x-large;
+        }
 
-     -->
+        th{
+            width: 100px;
+            height: 80px;
+            text-align: center;
+            background-color:  beige;
+        }
+     </style>
 
      <script>
         let obj = '{"id": "aaaa" , "title" : "bbb"}';
@@ -119,11 +73,32 @@
             console.log(typeof jsonString);
 
             let jsonStrings = '{"name":"John Doe","age":30,"isStudent":false,"courses":["Math","Science","history"],"address":{"strret":"123 Main st","city":"town","state":"Ca"}}';
-            let str =JSON.parse(jsonString);
+            let str = JSON.parse(jsonString);
+
+            console.log(str);
+            console.log(str.name);   
+
+            let contents = document.querySelector('#contents');
+            str = '';
+            str += `<table>`;
+            str +=      `<caption> 학생 정보 </caption>`;
+            str +=      `<tr>`;
+            str +=          `<th> Name </th>`;
+            str +=          `<td> ${person.name} </td>`;
+            str +=      `</tr>`;
+
+            str += `<tr>`;
+            str += `<th> age </th>`;
+            str += `<td> ${person.age}</td>`;
+            str += `</tr>`;
+            str += `<p> ${person.courses[0]}}, ${person.courses[1]} </p>`;
+            str+= `</table>`;
+
+            contents.innerHTML = str;
         }
      </script>
 </head>
 <body>
-    
+    <div id = contents></div>
 </body>
 </html>

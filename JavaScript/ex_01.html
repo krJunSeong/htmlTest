@@ -1,0 +1,41 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+            
+            idx = 0;
+            let arr = ['lightgray', 'lightblue', 'lightpink','lightgreen'];
+            function changeBody()
+            {
+                let _body = document.querySelector('body');
+                _body.style.backgroundColor = arr[idx];
+                idx = ((idx + 1) % arr.length);
+            }
+
+            window.onload = function () 
+            {
+                let _body = document.querySelector("body");
+                let hbtn = document.querySelector("#btn1");
+                let timer;
+
+                hbtn.addEventListener
+                ("click",
+                function () 
+                {
+                // class가 text라는 이름인 것들을 갖고 온다
+                _body.style.backgroundColor = arr[idx];
+                idx = ((idx + 1) % arr.length);
+                timer = setInterval(changeBody, 1000);  
+                }
+                );
+            }
+
+        </script>
+    </head>
+    <body>
+        <button id = "btn1"> 배경색 바꾸기</button>
+    </body>
+    </html>

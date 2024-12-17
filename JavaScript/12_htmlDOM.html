@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        /*
+        HTML 요소 찾기
+            document.querySelector(선택자)      : 선택자 규칙으로 요소 1개
+            document.querySelectorAll(선택자)   : 선택자 규칙으로 요소 여러개
+       
+        element.innerHTML
+        element.attribute(속성 이름) = 변경할 속성 값 : 요소의 속성값 변경
+        element.style.property(css 속성 이름) = 변경할 스타일 값 : 요소의 스타일 변경        
+        */
+        
+        window.addEventListener('load', function() // = window.onload = function() {}
+        {
+            document.getElementById("demo").innerHTML = 'hello world';
+            let pTag_id = document.getElementById('id');
+            pTag_id.value = '홍길동';
+
+            document.getElementById('demo').style.color = 'red';
+            document.getElementsByClassName('demo')[0].style.color = 'blue';
+
+            let pTag_class = document.getElementsByClassName('demo');
+            for(let i = 0; i < pTag_class.length; i++)
+            {
+                pTag_class[i].style.color = 'blue';
+            }
+
+            let btn = document.createElement('button');
+            btn.innerHTML = '전송하기';
+            document.body.appendChild(btn);
+
+        });
+    </script>
+</head>
+<body>
+    <p id="demo"> hello id</p>
+    <p class = "demo"> hello class</p>
+    <p class="demo"> hello class2</p>
+    <input type = "text" name="name" id="id" value="김길동">
+</body>
+</html>

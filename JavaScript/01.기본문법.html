@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        var a = 10;
+        a = 1.2;
+        var b = 'hello';
+        let c = 20; // 동일이름 불가능
+        const d = true;
+
+        console.log(a); 
+        console.log(b);
+        console.log(c);
+        console.log(d);
+        console.log("hello");
+
+        // 데이터 타입
+        // Number
+        // String
+        // underfined
+        // null         참조형
+        // Boolean      
+        // object       참조형
+        
+        let point = 123;
+        console.log(point);
+        console.log(typeof point);
+        point = -1.23;
+        console.log(typeof point);
+        point = 'ggg';
+        console.log(typeof point);
+
+
+        /*
+            Undefined 문자열이 아닌 하나의 값
+            변수가 선언되었지만 아직 값이 할당되지 않았을 때의 기본값
+
+            요약: 초기화 안 된 변수
+        */
+        let e;
+        console.log(e);
+
+        // null: 값이 없는 상태
+        //       변수나 객체 속성이 빈 값임을 명시적으로 나타낼 때 사용
+        e = null;
+        console.log(e);
+        console.log(typeof e);
+
+        console.log('---------');
+        
+        // undefined vs null
+
+        // == : null과 undefined는 동등 연산자로 하면 같다고 표시 됨
+        //         둘다 비어있기 때문임
+                
+        // === : 일치 연산자, 값 타입 모두 비교
+        //      null과 undefined 타입은 서로 같지 않아
+        
+        console.log(null == undefined);
+        console.log(null === undefined);
+        console.log(typeof undefined);
+        console.log(typeof null);
+
+        // Object : { name : value} 형태
+        let book =
+        {
+            title : "책",
+            point : 123
+        };
+
+        console.log(book.title);
+        console.log(book.point);
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

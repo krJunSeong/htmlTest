@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      window.onload = function () {
+        document.querySelector("#sel").addEventListener("change", function () {
+          let sel = this;
+          let img = document.querySelector("#selimg");
+
+          for (let i = 0; i < sel.length; i++) {
+            if (sel.options[i].selected == true) {
+              img.src = "../HTML/1.image/file/" + sel.options[i].value;
+            }
+          }
+        });
+      };
+    </script>
+  </head>
+  <body>
+    <!-- drop down -->
+    <select id="sel">
+      <option value="aaa.gif">다람쥐</option>
+      <option value="bbb.gif">다람쥐</option>
+      <option value="ccc.gif">다람쥐</option>
+    </select>
+    <img src="../HTML/1.image/file/aaa.gif" id="selimg" />
+  </body>
+</html>

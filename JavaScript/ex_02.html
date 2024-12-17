@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function keyup()
+        {
+        let _input = document.querySelector('#text');
+        let _span = document.querySelector("#content");
+        
+        if(_input.value.length < 10)
+        {
+            _span.innerHTML = `${_input.value.length}자 입니다`;
+        }
+        else
+        {
+            _span.innerHTML = '10자 이상입니다';
+        }
+
+        }
+    </script>
+</head>
+<body>
+    <input tpye= "text" id = "text" onkeyup="keyup()">
+    <span id = "content"></span>
+    
+</body>
+</html>
